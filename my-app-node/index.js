@@ -3,7 +3,7 @@ const client = hbase({host: 'hbase', port: 2181});
 client
     .table('user')
     .row('mu-user')
-    .get('contact', function (err, [cell]) {
+    .get('contact', function (err, cf) {
         console.log('!Error: ', err);
-        console.log('!Cell: ', cell);
+        console.log('!ColumnFamily: ', cf);
     });
