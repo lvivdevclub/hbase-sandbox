@@ -1,19 +1,19 @@
 version: "3"
 
 services:
-  my-app-java:
-    hostname: my-app-java
-    build: ./my-app
+#  my-app-java:
+#    hostname: my-app-java
+#    build: ./my-app
+#    restart: always
+#    links:
+#    - hbase
+
+  my-app-javascript:
+    hostname: my-app-node
+    build: ./my-app-node
     restart: always
     links:
     - hbase
-
-  # my-app-javascript:
-  #   hostname: my-app-java
-  #   build: ./my-app
-  #   restart: always
-  #   links:
-  #   - hbase
   namenode:
     image: bde2020/hadoop-namenode:2.0.0-hadoop2.7.4-java8
     container_name: namenode
