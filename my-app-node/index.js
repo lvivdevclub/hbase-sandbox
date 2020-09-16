@@ -1,5 +1,5 @@
 const hbase = require('hbase');
-const client = hbase({host: 'hbase', port: 2181});
+const client = hbase({host: 'hbase', port: 8080});
 client
     .table('user')
     .row('mu-user')
