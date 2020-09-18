@@ -1,4 +1,5 @@
 # hbase-sandbox
+docker-compose exec hbase hbase rest start -p 8080
 docker ps
 docker exec -i -t 7d1c1f19c186 /bin/bash # hbase
 hbase shell
